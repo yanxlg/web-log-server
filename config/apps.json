@@ -1,0 +1,10 @@
+{
+    "001":{
+        "appName":"kxt-web-frontend",
+        "pubKey":"testkey"
+    },
+    "002":{
+        "appName":"kxt-web-liveclass",
+        "pubKey":"testkey"
+    }
+}
