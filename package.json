@@ -7,8 +7,8 @@
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-web-log-server",
-    "stop": "egg-scripts stop --title=egg-server-web-log-server",
+    "start": "egg-scripts start --daemon --port=5010 --title=web-log-server",
+    "stop": "egg-scripts stop --title=web-log-server",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "debug": "egg-bin debug -r egg-ts-helper/register",
     "test-local": "egg-bin test -r egg-ts-helper/register",
