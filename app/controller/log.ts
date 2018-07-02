@@ -100,7 +100,7 @@ export default class LogController extends Controller {
                 }
             }
         }catch(e){
-        
+            console.error(e);
         }
         //返回一个icon
         ctx.body = "";

@@ -3,12 +3,12 @@
  * @author:yanxinaliang
  * @time：2017/10/27 18:05
  */
-import AES from "crypto-js/aes";
-import Utf8 from 'crypto-js/enc-utf8';
-import ModeECB from 'crypto-js/mode-ecb';
-import ZeroPadding from 'crypto-js/pad-zeropadding';
-import MD5 from 'crypto-js/md5';
-import CryptoBase64 from 'crypto-js/enc-base64';
+const AES = require("crypto-js/aes");
+const Utf8 = require("crypto-js/enc-utf8");
+const ModeECB = require("crypto-js/mode-ecb");
+const ZeroPadding = require("crypto-js/pad-zeropadding");
+const MD5 = require("crypto-js/md5");
+const CryptoBase64 = require("crypto-js/enc-base64");
 
 class Crypto{
     public static encrypt(data:string,key:string){
