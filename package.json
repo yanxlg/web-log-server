@@ -18,7 +18,8 @@
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "tslint --project . -c tslint.json",
-    "clean": "ets clean"
+    "clean": "ets clean",
+    "server":"ts-node ./app/console.ts --port=7777"
   },
   "dependencies": {
     "egg":"^2.9.1",
@@ -38,7 +39,9 @@
     "tslint": "^4.0.0",
     "typescript": "^2.8.1",
     "log4js": "^2.10.0",
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "nodejs-websocket":"^1.7.1",
+    "ts-node":"^7.0.0"
   },
   "engines": {
     "node": ">=8.9.0"
