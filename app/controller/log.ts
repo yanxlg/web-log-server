@@ -10,6 +10,8 @@ import {Base64Util, Crypto} from '../utils/Crypto';
 
 const apps = require("../../config/apps.json");
 
+const url = require("url/url.js");
+
 
 
 export default class LogController extends Controller {
@@ -63,7 +65,7 @@ export default class LogController extends Controller {
         //<域名> <日志级别> <日志内容>
         const request = ctx.request;
         const {header} = request;
-        const host=header.host;
+        const host=url.parse(header.referer, false).host;
         const params=request.query;
         const appId=params.k;
         const cipherText=params.d;
