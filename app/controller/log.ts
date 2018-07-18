@@ -5,7 +5,7 @@
  */
 import { Controller } from 'egg';
 import {Logger,configure,getLogger} from 'log4js';
-import {Crypto} from "../utils/Crypto";
+import {Base64Util, Crypto} from '../utils/Crypto';
 
 
 const apps = require("../../config/apps.json");
@@ -72,7 +72,7 @@ export default class LogController extends Controller {
                 const {appName,pubKey}=apps[appId];
                 const logger:Logger=this.getInstanceByAppName(appName);
                 logger.addContext("host",host);
-                const data=Crypto.decrypt(cipherText,pubKey);
+                const data=Crypto.decrypt(Base64Util.parse(cipherText),pubKey);// 同时base64处理
                 const logData=JSON.parse(data);
                 const {level,content}=logData;
                 switch (level){

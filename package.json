@@ -9,7 +9,7 @@
   "scripts": {
     "start": "egg-scripts start --daemon --port=5010 --title=web-log-server",
     "stop": "egg-scripts stop --title=web-log-server",
-    "dev": "egg-bin dev -r egg-ts-helper/register",
+    "dev": "egg-bin dev -r egg-ts-helper/register --port=5010",
     "debug": "egg-bin debug -r egg-ts-helper/register",
     "test-local": "egg-bin test -r egg-ts-helper/register",
     "test": "npm run lint -- --fix && npm run test-local",
